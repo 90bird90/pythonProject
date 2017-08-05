@@ -11,7 +11,11 @@ from pa.test5 import test5
 from pa.test6 import *
 from mysql.mysql import mysqltest
 from sockettest.server import server
- 
+import thread
+import time
+
+from python_thread.threadTest import  ThreadTest
+
 #runoob1()
 #runoob2()
 #test()
@@ -38,8 +42,39 @@ print "Employee.__bases__:", test3.__bases__
 print "Employee.__dict__:", test3.__dict__
 print "\n"'''
 
-t = mysqltest()
-t.test1()
+#t = mysqltest()
+#t.test1()
 
 #t= server()
 #t.testconnect()
+
+
+#t= ThreadTest()
+#t.thread_start()
+'''
+# 为线程定义一个函数
+def print_time(threadName, delay):
+	count = 0
+	while count < 5:
+		time.sleep(delay)
+		count += 1
+		print "%s: %s" % (threadName, time.ctime(time.time()))
+
+
+# 创建两个线程
+try:
+	thread.start_new_thread(print_time, ("Thread-1", 2,))
+	thread.start_new_thread(print_time, ("Thread-2", 4,))
+except:
+	print "Error: unable to start thread"
+
+while 1:
+	pass
+
+'''
+
+
+
+
+
+
