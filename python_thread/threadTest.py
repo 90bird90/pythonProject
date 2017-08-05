@@ -38,6 +38,9 @@ thread2 = ThreadTest(2,"thread2",10)
 thread1.start()
 thread2.start()
 
+
+# WHAT EVER
+
 print "Exiting Main Thread"
 
 
