@@ -38,8 +38,8 @@ print "Employee.__bases__:", test3.__bases__
 print "Employee.__dict__:", test3.__dict__
 print "\n"'''
 
-#t = mysqltest()
-#t.test1()
+t = mysqltest()
+t.test1()
 
-t= server()
-t.testconnect()
+#t= server()
+#t.testconnect()
