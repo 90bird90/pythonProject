@@ -79,7 +79,6 @@ def translate_excel_to_xml(excel_absolute_path, name, generate_xml_dir, colnname
 		# print table.cell(0, ncol).value
 		# 将此元素作为根元素的子节点
 
-		item.g
 		info.appendChild(item)
 
 	# 要生成的xml文件名
@@ -88,8 +87,10 @@ def translate_excel_to_xml(excel_absolute_path, name, generate_xml_dir, colnname
 	geneate_xml_dir = os.path.join(generate_xml_dir, generate_xml_name)
 
 	f = open(geneate_xml_dir, 'w')
+
+	context = doc.toprettyxml()
 	#doc.writexml(f)
-	f.write(doc.toprettyxml())  # 可以使生成xml有好看的格式，要是不需要，可以使用上一行的代码
+	f.write(context)  # 可以使生成xml有好看的格式，要是不需要，可以使用上一行的代码
 	f.close()
 
 
