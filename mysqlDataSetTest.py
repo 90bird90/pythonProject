@@ -1,6 +1,9 @@
 
 #! encoding=utf-8
 
+# use dataset need moko package use {pip install moko} resolve
+
+
 import dataset
 
 SELECT_STR = 'SELECT playerId,playerName,playerLevel  FROM t_player_data WHERE playerLevel > 60'
